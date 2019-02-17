@@ -1,9 +1,11 @@
 from patterns import *
-import pyautogui as robot
+from random import *
+
 import clipboard
 import re
 import time
-from random import *
+import pyautogui as robot
+
 
 def auto_move(direction='down',times=1):
     for i in range(times):
@@ -72,10 +74,3 @@ def auto_change_pattern(regex_pattern, markov_chain):
 
 def sleep(seconds):
     time.sleep(seconds)
-
-for i in range(4):
-    auto_change_pattern(SC_BD_DUR, SC_BD_RHYTHMS)
-    auto_change_pattern(SC_SN_DUR, SC_SN_RHYTHMS)
-    auto_change_pattern(SC_CH_DUR, SC_CH_RHYTHMS)
-    auto_change_pattern(SC_SY_DEG, SC_SY_DEGREE)
-    #auto_change_pattern(SC_RD_DUR, SC_RD_RHYTHMS)
